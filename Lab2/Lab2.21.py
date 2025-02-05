@@ -13,7 +13,6 @@ class Book:
     def __repr__(self):
         return f"Book(id_={self.id}, name='{self.name}', pages={self.pages})"
 
-
 class Library:
     def __init__(self, books=None):
         if books is None:
@@ -31,7 +30,6 @@ class Library:
             if book.id == id_:
                 return index
         raise ValueError("Книги с запрашиваемым id не существует")
-
 
 if __name__ == '__main__':
     empty_library = Library()  # инициализируем пустую библиотеку
