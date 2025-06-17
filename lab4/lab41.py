@@ -84,6 +84,14 @@ class CDDisk(Disk):
         return (f"CD-диск '{self.title}', вместимость: {self.capacity}GB, "
                 f"использовано: {self.used_space}GB, качество аудио: {self.audio_quality}")
 
+    def __repr__(self) -> str:
+        """
+        Возвращает официальное строковое представление CD-диска.
+        Возвращаемое значение:
+            str: Официальное строковое представление CD-диска.
+        """
+        return f"{self.__class__.__name__}(title={self.title}, audio_quality={self.audio_quality})"
+
     def display_info(self) -> str:
         """
         Возвращает информацию о CD-диске.
@@ -105,4 +113,3 @@ if __name__ == "__main__":
         cd_disk.add_data(0.5)
     except ValueError as error:
         print(error)
-
