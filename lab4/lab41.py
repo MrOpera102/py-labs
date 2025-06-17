@@ -102,5 +102,7 @@ if __name__ == "__main__":
         print(cd_disk)
         print(cd_disk.display_info())
         print(repr(cd_disk))
-        cd_disk.add_data(0.5)  # Добавляем данные на диск
+        cd_disk.add_data(0.5)
+    except ValueError as error:
+        print(error)
 
