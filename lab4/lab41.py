@@ -34,7 +34,7 @@ class Disk:
         Возвращаемое значение:
             str: Официальное строковое представление диска.
         """
-        return f"{self.__class__.__name__}(title={self.title!r}, capacity={self.capacity!r}, used_space={self.used_space!r})"
+        return f"{self.__class__.__name__}(title={self.title!r}, capacity={self.capacity!r})"
 
     def add_data(self, size: float) -> None:
         """
